@@ -25,3 +25,17 @@ import com.example.meet7.R
 import com.example.meet7.model.Siswa
 import androidx.compose.material3.TopAppBar
 
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun TampilSiswa(
+    //edit 1 : parameter statusUiSiswa
+    statusUiSiswa: Siswa,
+    onBackButtonClicked: () -> Unit
+){
+    //edit 2 : items Pair
+    val items = listOf(
+        Pair(stringResource(R.string.nama), statusUiSiswa.nama),
+        Pair(stringResource(id = R.string.gender), statusUiSiswa.gender),
+        Pair(stringResource(id = R.string.alamat), statusUiSiswa.alamat)
+    )
+
